@@ -1,17 +1,17 @@
 # outline
-kube-apiserver  
-│  
-├── Core API Server (Pods, Services...)  
-├── APIExtensions Server (CRDs)  
-└── Aggregator Server  
-    ├── /apis/core/v1 → delegate to Core  
-    ├── /apis/apps/v1 → delegate to Core  
-    ├── /apis/custom.example.com/v1 → proxy to external service  
-    └── Controllers:  
-        ├── AutoRegistration (register built-in APIs as APIService)  
-        ├── CRDRegistration (auto-create APIService for CRDs)  
-        ├── Availability (local/remote health)  
-        └── DiscoveryAggregation  
+## kube-apiserver
+	│
+	├── Core API Server (Pods, Services...)
+	├── APIExtensions Server (CRDs)
+	└── Aggregator Server
+		├── /apis/core/v1 → delegate to Core
+		├── /apis/apps/v1 → delegate to Core
+		├── /apis/custom.example.com/v1 → proxy to external service
+		└── Controllers:
+			├── AutoRegistration (register built-in APIs as APIService)
+			├── CRDRegistration (auto-create APIService for CRDs)
+			├── Availability (local/remote health)
+			└── DiscoveryAggregation 
 
 # 完善Aggregator apiserver config
 
